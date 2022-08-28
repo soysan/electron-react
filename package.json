@@ -9,7 +9,8 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint --ext .ts,.tsx ."
+    "lint": "eslint --ext .ts,.tsx .",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": {
@@ -17,6 +18,9 @@
     "email": "soy2.san@gmail.com"
   },
   "license": "MIT",
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  },
   "config": {
     "forge": {
       "packagerConfig": {},
@@ -77,9 +81,13 @@
     "css-loader": "^6.0.0",
     "electron": "20.0.3",
     "eslint": "^8.0.1",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.25.0",
     "fork-ts-checker-webpack-plugin": "^7.2.1",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
     "node-loader": "^2.0.0",
+    "prettier": "2.7.1",
     "style-loader": "^3.0.0",
     "ts-loader": "^9.2.2",
     "typescript": "~4.5.4"
